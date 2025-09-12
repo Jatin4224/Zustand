@@ -1,12 +1,9 @@
-import useCounter from "./store";
+import ChaiOrder from "./components/ChaiOrder";
 
 const App = () => {
-  const { count } = useCounter();
   return (
     <div>
-      <h1>Count - {count}</h1>
-      <button onClick={increment}>⬆️</button>
-      <button onClick={decrement}>⬇️</button>
+      <ChaiOrder />
     </div>
   );
 };
