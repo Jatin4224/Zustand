@@ -264,6 +264,18 @@ const ChaiOrder = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-[#1c0f0a] text-white flex items-center justify-center p-6">
+      {/* 🛒 Cart button on top-right */}
+      <div className="absolute top-4 right-6">
+        <button className="relative bg-orange-500 px-4 py-2 rounded-lg font-semibold hover:bg-orange-600 transition">
+          🛒 Cart
+          {/* Badge with order count */}
+          {orders.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+              {orders.length}
+            </span>
+          )}
+        </button>
+      </div>
       {/* Container with form on left, image on right */}
       <div className="flex flex-col md:flex-row items-center md:items-start gap-10 w-full max-w-6xl">
         {/* Left Side - Chai Form & Orders */}
